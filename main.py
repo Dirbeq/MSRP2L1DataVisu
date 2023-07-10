@@ -23,7 +23,7 @@ map_df = gpd.read_file(geojson_data)
 merged_df = map_df.merge(df, how="inner", left_on="code", right_on="Code de la commune")
 
 # zoom sur la carte
-m = folium.Map(location=[48.202047, -3.650688], zoom_start=9)
+m = folium.Map(location=[46.678193, 1.81177], zoom_start=6)
 color_mapping = {
     "MÉLENCHON": "pink",
     "HIDALGO": "magenta",
