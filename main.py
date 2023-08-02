@@ -3,7 +3,7 @@ import folium
 import geopandas as gpd
 import random
 
-df = pd.read_csv("C:/Users/pydim/Desktop/MSPR2/Data/Data1.csv", sep=";", dtype=object)
+df = pd.read_csv("./dataset/Data1.csv", sep=";", dtype=object)
 
 # Convertir la colonne "Voix" en type numérique
 df['Voix'] = pd.to_numeric(df['Voix'], errors='coerce')
