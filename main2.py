@@ -4,7 +4,7 @@ import geopandas as gpd
 import random
 
 
-def nouvelle_aquitaine():
+def france():
     df = pd.read_csv("./dataset/Data2Clear.csv", sep=";", dtype=object, encoding='latin-1')
     df2 = pd.read_csv("./dataset/Data1Clear.csv", sep=";", dtype=object, encoding='latin-1')
 
@@ -28,7 +28,7 @@ def nouvelle_aquitaine():
     merged_df = map_df.merge(df, how="inner", left_on="code", right_on="CodeDepartement")
     merged_df2 = map_df.merge(df2, how="inner", left_on="code", right_on="CodeDepartement")
 
-    # Focus de la map sur une zone (ici nouvelle aquitaine)
+    # Focus de la map sur une zone
     m = folium.Map(location=[46.678193, 1.81177], zoom_start=6)
     color_mapping = {
         "MÉLENCHON": "pink",
@@ -84,4 +84,4 @@ def nouvelle_aquitaine():
 
 
 if __name__ == "__main__":
-    nouvelle_aquitaine()
+    france()
